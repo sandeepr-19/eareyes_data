@@ -55,7 +55,7 @@ app.get("/event1", (req, res) => {
       "rollno3",
     ];
     //Write Column Title in Excel file
-    const ws1 = wb.addWorksheet("Worksheet Name");
+    const ws1 = wb.addWorksheet("Worksheet 1");
 
     let headingColumnIndex = 1;
     headingColumnNames.forEach((heading) => {
@@ -115,7 +115,7 @@ app.get("/event2", (req, res) => {
       "rollno3",
     ];
     //Write Column Title in Excel file
-    const ws2 = wb.addWorksheet("Worksheet Name");
+    const ws2 = wb.addWorksheet("Worksheet 2");
 
     let headingColumnIndex = 1;
     headingColumnNames.forEach((heading) => {
@@ -156,7 +156,7 @@ app.get("/event3", (req, res) => {
 
     const headingColumnNames = ["name", "rollno", "email", "mobileno"];
     //Write Column Title in Excel file
-    const ws3 = wb.addWorksheet("Worksheet Name");
+    const ws3 = wb.addWorksheet("Worksheet 3");
 
     let headingColumnIndex = 1;
     headingColumnNames.forEach((heading) => {
@@ -198,7 +198,7 @@ app.get("/event4", (req, res) => {
 
     const headingColumnNames = ["name", "rollno", "email", "mobileno"];
     //Write Column Title in Excel file
-    const ws4 = wb.addWorksheet("Worksheet Name");
+    const ws4 = wb.addWorksheet("Worksheet 4");
 
     let headingColumnIndex = 1;
     headingColumnNames.forEach((heading) => {
@@ -255,7 +255,7 @@ app.get("/event5", (req, res) => {
       "rollno3",
     ];
     //Write Column Title in Excel file
-    const ws5 = wb.addWorksheet("Worksheet Name");
+    const ws5 = wb.addWorksheet("Worksheet 5");
 
     let headingColumnIndex = 1;
     headingColumnNames.forEach((heading) => {
@@ -312,7 +312,7 @@ app.get("/event6", (req, res) => {
       "rollno3",
     ];
     //Write Column Title in Excel file
-    const ws6 = wb.addWorksheet("Worksheet Name");
+    const ws6 = wb.addWorksheet("Worksheet 6");
 
     let headingColumnIndex = 1;
     headingColumnNames.forEach((heading) => {
