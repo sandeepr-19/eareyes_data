@@ -5,7 +5,6 @@ const pug = require("pug");
 const path = require("path");
 const xl = require("excel4node");
 const wb = new xl.Workbook();
-const ws = wb.addWorksheet("Worksheet Name");
 
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "./views"));
@@ -56,16 +55,18 @@ app.get("/event1", (req, res) => {
       "rollno3",
     ];
     //Write Column Title in Excel file
+    const ws1 = wb.addWorksheet("Worksheet Name");
+
     let headingColumnIndex = 1;
     headingColumnNames.forEach((heading) => {
-      ws.cell(1, headingColumnIndex++).string(heading);
+      ws1.cell(1, headingColumnIndex++).string(heading);
     });
     //Write Data in Excel file
     let rowIndex = 2;
     details.forEach((record) => {
       let columnIndex = 1;
       Object.keys(record).forEach((columnName) => {
-        ws.cell(rowIndex, columnIndex++).string(record[columnName]);
+        ws1.cell(rowIndex, columnIndex++).string(record[columnName]);
       });
       rowIndex++;
     });
@@ -114,16 +115,18 @@ app.get("/event2", (req, res) => {
       "rollno3",
     ];
     //Write Column Title in Excel file
+    const ws2 = wb.addWorksheet("Worksheet Name");
+
     let headingColumnIndex = 1;
     headingColumnNames.forEach((heading) => {
-      ws.cell(1, headingColumnIndex++).string(heading);
+      ws2.cell(1, headingColumnIndex++).string(heading);
     });
     //Write Data in Excel file
     let rowIndex = 2;
     details.forEach((record) => {
       let columnIndex = 1;
       Object.keys(record).forEach((columnName) => {
-        ws.cell(rowIndex, columnIndex++).string(record[columnName]);
+        ws2.cell(rowIndex, columnIndex++).string(record[columnName]);
       });
       rowIndex++;
     });
@@ -153,16 +156,18 @@ app.get("/event3", (req, res) => {
 
     const headingColumnNames = ["name", "rollno", "email", "mobileno"];
     //Write Column Title in Excel file
+    const ws3 = wb.addWorksheet("Worksheet Name");
+
     let headingColumnIndex = 1;
     headingColumnNames.forEach((heading) => {
-      ws.cell(1, headingColumnIndex++).string(heading);
+      ws3.cell(1, headingColumnIndex++).string(heading);
     });
     //Write Data in Excel file
     let rowIndex = 2;
     details.forEach((record) => {
       let columnIndex = 1;
       Object.keys(record).forEach((columnName) => {
-        ws.cell(rowIndex, columnIndex++).string(record[columnName]);
+        ws3.cell(rowIndex, columnIndex++).string(record[columnName]);
       });
       rowIndex++;
     });
@@ -193,16 +198,18 @@ app.get("/event4", (req, res) => {
 
     const headingColumnNames = ["name", "rollno", "email", "mobileno"];
     //Write Column Title in Excel file
+    const ws4 = wb.addWorksheet("Worksheet Name");
+
     let headingColumnIndex = 1;
     headingColumnNames.forEach((heading) => {
-      ws.cell(1, headingColumnIndex++).string(heading);
+      ws4.cell(1, headingColumnIndex++).string(heading);
     });
     //Write Data in Excel file
     let rowIndex = 2;
     details.forEach((record) => {
       let columnIndex = 1;
       Object.keys(record).forEach((columnName) => {
-        ws.cell(rowIndex, columnIndex++).string(record[columnName]);
+        ws4.cell(rowIndex, columnIndex++).string(record[columnName]);
       });
       rowIndex++;
     });
@@ -248,16 +255,18 @@ app.get("/event5", (req, res) => {
       "rollno3",
     ];
     //Write Column Title in Excel file
+    const ws5 = wb.addWorksheet("Worksheet Name");
+
     let headingColumnIndex = 1;
     headingColumnNames.forEach((heading) => {
-      ws.cell(1, headingColumnIndex++).string(heading);
+      ws5.cell(1, headingColumnIndex++).string(heading);
     });
     //Write Data in Excel file
     let rowIndex = 2;
     details.forEach((record) => {
       let columnIndex = 1;
       Object.keys(record).forEach((columnName) => {
-        ws.cell(rowIndex, columnIndex++).string(record[columnName]);
+        ws5.cell(rowIndex, columnIndex++).string(record[columnName]);
       });
       rowIndex++;
     });
@@ -303,16 +312,18 @@ app.get("/event6", (req, res) => {
       "rollno3",
     ];
     //Write Column Title in Excel file
+    const ws6 = wb.addWorksheet("Worksheet Name");
+
     let headingColumnIndex = 1;
     headingColumnNames.forEach((heading) => {
-      ws.cell(1, headingColumnIndex++).string(heading);
+      ws6.cell(1, headingColumnIndex++).string(heading);
     });
     //Write Data in Excel file
     let rowIndex = 2;
     details.forEach((record) => {
       let columnIndex = 1;
       Object.keys(record).forEach((columnName) => {
-        ws.cell(rowIndex, columnIndex++).string(record[columnName]);
+        ws6.cell(rowIndex, columnIndex++).string(record[columnName]);
       });
       rowIndex++;
     });
